@@ -4,12 +4,14 @@ def clean_currency(item: str) -> float:
     '''
     remove anything from the item that prevents it from being converted to a float
     '''    
-    return 
+    item = float(item.replace('$', '').replace(',', ''))
+    return item
 
 def extract_year_mdy(timestamp):
     '''
     use the datatime.strptime to parse the date and then extract the year
     '''
+    date = datetime.strptime(timestamp, '%m/%d/%Y')
     return 
 
 def clean_country_usa(item: str) ->str:
@@ -20,6 +22,9 @@ def clean_country_usa(item: str) ->str:
     possibilities = [
         'united states of america', 'usa', 'us', 'united states', 'u.s.'
     ]
+    for possibility in possibilities:
+        if possibility in item.lower():
+            return 'United States'
     return
 
 
