@@ -17,8 +17,8 @@ statedf.to_csv('cache/states.csv', index=False)
 
 for year in surveydf['Year'].unique():
     # extract the cost of living for that year from the website
-    url = f"https://www.worlddata.info/average-income.php?year={year}"
-    col = pd.read_html(url)[0]
+    col = pd.read_html(f"https://www.numbeo.com/cost-of-living/rankings.jsp?title={year}&displayColumn=0")
+    col = col[1]
     col['Year'] = year
     col.to_csv(f'cache/col_{year}.csv', index=False)
 
