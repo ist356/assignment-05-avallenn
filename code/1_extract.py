@@ -15,5 +15,13 @@ surveydf['Year'] = surveydf['Timestamp'].apply(pl.extract_year_mdy)
 surveydf.to_csv('cache/survey.csv', index=False)
 statedf.to_csv('cache/states.csv', index=False)
 
+for year in surveydf['Year'].unique():
+    # extract the cost of living for that year from the website
+    url = f"https://www.worlddata.info/average-income.php?year={year}"
+    col = pd.read_html(url)[0]
+    col['Year'] = year
+    col.to_csv(f'cache/col_{year}.csv', index=False)
+
+st.dataframe(col)
 st.dataframe(statedf)
 st.dataframe(surveydf)
