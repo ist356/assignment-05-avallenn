@@ -22,4 +22,4 @@ Examples:
 **Best Reflection** "I learned when to use while vs for loops. While loops are for sentiel-controlled values (waiting for a condition to occur), vs for loops are for iterating over collections of fixed values."
 
 `--- Reflection Below This Line ---`
-
+This is the best I have felt during an assignment. After starting it right after class I was already focused on what was learned (building a pipe line) so I was easily able to identify the issues I was having (not having a cache folder and the tests not working) and email you with my concerns. For the extract part the only thing I was confused about was what link to use for the cost of living dataframe so I looked at the solution to see the link and used that. From this assignment I feel confident in combining and manipulating datasets, as well as creating pivot tables. The only other thing I was confused about was the syntax of how save the reports to the AWS S3 bucket, but I used the solutions as a reference and figured it out!
