@@ -40,5 +40,4 @@ pivot1 = combined.pivot_table(index='_full_city', columns='How old are you?', va
 pivot1.to_csv('cache/annual_salary_adjusted_by_location_and_age.csv')
 
 pivot2 = combined.pivot_table(index='_full_city', columns='What is your highest level of education completed?', values='_annual_salary_adjusted', aggfunc='mean')
-st.dataframe(pivot2)
 pivot2.to_csv('cache/annual_salary_adjusted_by_location_and_education.csv')
